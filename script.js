@@ -3,16 +3,16 @@ $(document).ready(function($) {
   /* Day/Night Toggle */
 
   $("#daynightToggleSwitch").on("click", function () {
-    $("body").toggleClass("night");
+    if ( $("body").hasClass("night") ) {
+      $("body").removeClass("night");
+      clearDrawing();
+      draw("red", "green", "yellow");
+    } else {
+      $("body").addClass("night");
+      clearDrawing();
+      draw(house_blue, house_dark_blue, house_light_grey);
+    }
   });
-
-  /* Waypoints */
-  // new Waypoint({
-  //   element: document.getElementById("house1"),
-  //   handler: function(direction) {
-  //     alert('reached house1');
-  //   }
-  // });
 
   //house1
   $('#house1').waypoint(function(direction) {
