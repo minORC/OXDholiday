@@ -1,0 +1,233 @@
+/*
+background-day: #233963;
+toggle-day: #314c7c;
+toggle-night: #7bb4d5;
+house-dark-blue: #314c7c;
+house-blue: #528fbc;
+house-light-grey: #d6d7d8;
+
+
+*/
+
+
+
+
+
+
+html,body{
+  margin:0;
+  height:100%;
+}
+
+body {
+  background: #7bb4d5;
+  -webkit-transition: background-color 150ms ease-out;
+  transition: background-color 150ms ease-out;
+  padding: 0 60px;
+}
+
+/* Day/Night Toggle */
+body.night {
+  background:#233963;
+}
+
+#dayNightControls {
+  padding-top: 60px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dayNightToggle {
+  position: fixed;
+}
+
+#nightIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 9px;
+  fill: white;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+}
+
+#dayIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 9px;
+  fill: white;
+  z-index: 1;
+  top: -1px;
+  right: -1px;
+}
+
+#dayIcon, #nightIcon {
+  cursor: pointer;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle, .toggle:after, .toggle:before, .toggle *, .toggle *:after, .toggle *:before, .toggle + .toggle-button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.toggle::-moz-selection, .toggle:after::-moz-selection, .toggle:before::-moz-selection, .toggle *::-moz-selection, .toggle *:after::-moz-selection, .toggle *:before::-moz-selection, .toggle + .toggle-button::-moz-selection {
+  background: none;
+}
+
+.toggle::selection, .toggle:after::selection, .toggle:before::selection, .toggle *::selection, .toggle *:after::selection, .toggle *:before::selection, .toggle + .toggle-button::selection {
+  background: none;
+}
+
+.toggle + .toggle-button {
+  outline: 0;
+  display: inline-block;
+  width: calc(80px + 10px);
+  height: 40px;
+  position: relative;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border: 2px solid #314c7c;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body.night .toggle + .toggle-button {
+  border: 2px solid #7bb4d5;
+}
+
+.toggle + .toggle-button:after {
+  position: relative;
+  display: block;
+  content: "";
+  width: 38px;
+  height: 38px;
+  top: -1px;
+}
+
+.toggle + .toggle-button:after {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  background: #314c7c;
+  content: "";
+  border-radius: 19px;
+  left: -1px;
+}
+
+body.night .toggle + .toggle-button:after {
+  background: #7bb4d5;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: calc(50% + 5px + 1px);
+}
+
+
+/* Building of houses */
+
+#building {
+  padding: 0 70px;
+}
+
+.level {
+  display: flex;
+  justify-content: center;
+}
+
+.level__house {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+}
+
+.window {
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  background: #FFDB88;
+  opacity: 0;
+}
+
+.level1 .window, .level3 .window {
+  left: 72px;
+  top: 216px;
+}
+
+.level2 .window, .level4 .window{
+  left: 366px;
+  top: 216px;
+
+
+}
+
+.level1 .level__house {
+  margin-right: 162px;
+}
+
+.level2 .level__house {
+  margin-top: -450px;
+  margin-left: 162px;
+}
+
+.level3 .level__house {
+  margin-top: -426px;
+  margin-right: 704px;
+}
+
+.level4 .level__house {
+  margin-top: -540px;
+  margin-left: 508px;
+}
+
+
+/* Snow field */
+.snowfield {
+  height: 200px;
+  background: white;
+  margin: 0 -60px;
+  opacity: .99;
+}
+
+
+/* Animation*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+  0%, 35% {
+    opacity: 0;
+  }
+
+  25%, 75%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%, 35% {
+    opacity: 0;
+  }
+
+  25%, 75%, 100% {
+    opacity: 1;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
