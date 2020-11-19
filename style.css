@@ -137,11 +137,11 @@ body.night .toggle + .toggle-button:after {
 }
 
 .level2 {
-  margin-top: -700px;
+  margin-top: -550px;
 }
 
 .level3 {
-  margin-top: -700px;
+  margin-top: -770px;
 }
 
 .level__house {
@@ -199,19 +199,26 @@ body.night .toggle + .toggle-button:after {
 .level .house .window {
   fill: white;
 }
+.level .house .light {
+  fill: pink;
+  opacity: 1;
+}
 
 .night .level .house .side {
-  fill:#D5D6D7;
+  fill: #D5D6D7;
 }
-
 .night .level .house .roof {
-  fill:#2B4B80;
+  fill: #2B4B80;
 }
 .night .level .house .front {
-  fill:#3D8FBF;
+  fill: #3D8FBF;
 }
 .night .level .house .window {
-  fill:#FAD9C7;
+  fill: #FAD9C7;
+}
+.night .level .house .light {
+  fill: #D5D6D7;
+  opacity: 0;
 }
 
 /* Snow field */

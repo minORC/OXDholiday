@@ -4,13 +4,10 @@ $(document).ready(function($) {
   $("#daynightToggleSwitch").on("click", function () {
     if ( $("body").hasClass("night") ) {
       $("body").removeClass("night");
-      //clearDrawing();
-      //draw("pink", "salmon", "beige");
     } else {
       $("body").addClass("night");
-      //clearDrawing();
-      //draw(house_blue, house_dark_blue, house_light_grey);
     }
+    //TODO: Reset night animations on toggle to day and back to night
   });
 
   /* Parallax */
@@ -23,16 +20,18 @@ $(document).ready(function($) {
   //house1
   $('.level1').waypoint(function(direction) {
     if ( $("body").hasClass("night") && direction === 'down') {
-      $('.level1 .window img').addClass('animated flash');
+      $('.level1 .window img', ).addClass('animated flash');
+      $('.level1 .light').addClass('animated flash');
     }
   }, {
-		offset: '20%'
+		offset: '10%'
 	});
 
   //house2
   $('.night .level2').waypoint(function(direction) {
     if ( $("body").hasClass("night") && direction === 'down') {
       $('.level2 .window img').addClass('animated flash');
+      $('.level2 .light').addClass('animated flash');
     }
   }, {
 		offset: '20%'
@@ -42,9 +41,10 @@ $(document).ready(function($) {
   $('.night .level3').waypoint(function(direction) {
     if ( $("body").hasClass("night") && direction === 'down') {
       $('.level3 .window img').addClass('animated flash');
+      $('.level3 .light').addClass('animated flash');
     }
   }, {
-		offset: '40%'
+		offset: '20%'
 	});
 
 });
