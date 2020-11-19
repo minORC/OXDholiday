@@ -127,7 +127,6 @@ body.night .toggle + .toggle-button:after {
 
 
 /* Building of houses */
-
 #building {
   padding: 0 70px;
 }
@@ -137,30 +136,20 @@ body.night .toggle + .toggle-button:after {
   justify-content: center;
 }
 
+.level2 {
+  margin-top: -700px;
+}
+
+.level3 {
+  margin-top: -700px;
+}
+
 .level__house {
   position: relative;
   font-size: 0;
   line-height: 0;
-}
-
-.window {
-  position: absolute;
-  width: 168px;
-  height: 168px;
-  background: #FFDB88;
-  opacity: 0;
-}
-
-.level1 .window, .level3 .window {
-  left: 72px;
-  top: 216px;
-}
-
-.level2 .window, .level4 .window{
-  left: 366px;
-  top: 216px;
-
-
+  width: 500px;
+  min-width: 500px;
 }
 
 .level1 .level__house {
@@ -168,26 +157,69 @@ body.night .toggle + .toggle-button:after {
 }
 
 .level2 .level__house {
-  margin-top: -450px;
   margin-left: 162px;
 }
 
 .level3 .level__house {
-  margin-top: -426px;
   margin-right: 704px;
 }
 
-.level4 .level__house {
-  margin-top: -540px;
-  margin-left: 508px;
+.window {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #314c7c;
+  top: 150px;
+  right: 40px;
 }
 
+.window img {
+  width: 100%;
+  height: 100%;
+}
+
+.night .window img {
+  opacity: 0;
+}
+
+.house {
+  position: relative;
+}
+
+.level .house .side {
+  fill: beige;
+}
+
+.level .house .roof {
+  fill: salmon;
+}
+.level .house .front {
+  fill: pink;
+}
+.level .house .window {
+  fill: white;
+}
+
+.night .level .house .side {
+  fill:#D5D6D7;
+}
+
+.night .level .house .roof {
+  fill:#2B4B80;
+}
+.night .level .house .front {
+  fill:#3D8FBF;
+}
+.night .level .house .window {
+  fill:#FAD9C7;
+}
 
 /* Snow field */
 .snowfield {
-  height: 200px;
+  height: 500px;
   background: white;
   margin: 0 -60px;
+  margin-top: -250px;
   opacity: .99;
 }
 
@@ -201,8 +233,12 @@ body.night .toggle + .toggle-button:after {
 }
 
 @-webkit-keyframes flash {
-  0%, 35% {
+  0% {
     opacity: 0;
+  }
+
+  35% {
+    opacity: 0.3;
   }
 
   25%, 75%, 100% {
@@ -211,8 +247,12 @@ body.night .toggle + .toggle-button:after {
 }
 
 @keyframes flash {
-  0%, 35% {
+  0% {
     opacity: 0;
+  }
+
+  35% {
+    opacity: 0.3;
   }
 
   25%, 75%, 100% {

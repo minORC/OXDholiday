@@ -1,10 +1,9 @@
 /* Drawing building of Houses */
 
-
+//drawing colours
 var house_dark_blue = "#314c7c";
 var house_blue = "#528fbc";
 var house_light_grey = "#d6d7d8";
-
 
 //house1
 var canvas1 = document.getElementById("house1");
@@ -30,7 +29,7 @@ if (canvas4.getContext) {
   var ctx4 = canvas4.getContext("2d");
 }
 
-
+//drawing drawings with colour params
 function draw(a, b, c) {
 //house1
   //front
@@ -156,6 +155,7 @@ function draw(a, b, c) {
   ctx4.fillRect(0, 216, 260, 324);
 }
 
+//clearing all drawings
 function clearDrawing() {
   ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
   ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
@@ -163,4 +163,5 @@ function clearDrawing() {
   ctx4.clearRect(0, 0, canvas4.width, canvas4.height);
 }
 
+//draw inital drawings
 draw(house_blue, house_dark_blue, house_light_grey);
