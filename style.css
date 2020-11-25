@@ -2,37 +2,111 @@
 background-day: #233963;
 toggle-day: #314c7c;
 toggle-night: #7bb4d5;
-house-dark-blue: #314c7c;
-house-blue: #528fbc;
-house-light-grey: #d6d7d8;
+dark-blue: #314c7c;
+blue: #528fbc;
+light-grey: #d6d7d8;
+lightest-grey: #e5e5e5;
+snow-white: #e9e9e9;
+
 */
 
-html,body{
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/* CSS Reset */
+div {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Fill colors for houses*/
+.dark-blue {
+  fill: salmon;
+}
+.blue {
+  fill: pink;
+}
+.light-grey {
+  fill: beige;
+}
+.lightest-grey {
+  fill: #e5e5e5;
+}
+
+.night .dark-blue {
+  fill: #314c7c;
+}
+.night .blue {
+  fill: #528fbc;
+}
+.night .light-grey {
+  fill: #d6d7d8;
+}
+
+
+/* Global styles */
+html {
+  font-size: 62.5%;
+}
+html, body{
   margin:0;
-  height:100%;
+  width: 100%;
 }
 
 body {
   background: #7bb4d5;
-  -webkit-transition: background-color 150ms ease-out;
-  transition: background-color 150ms ease-out;
-  padding: 0 60px;
+  -webkit-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 3.2rem;
+  line-height: 1em;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 8.0rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  h1 {
+    font-size: 7.2rem;
+  }
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 2.4rem;
+  }
 }
 
 /* Day/Night Toggle */
 body.night {
-  background:#233963;
+  background: #233963;
 }
 
 #dayNightControls {
-  padding-top: 60px;
-  padding-bottom: 200px;
   display: flex;
   justify-content: flex-end;
+  padding: 60px;
 }
 
 .dayNightToggle {
-  position: fixed;
+  z-index: 1000;
 }
 
 #nightIcon {
@@ -125,111 +199,359 @@ body.night .toggle + .toggle-button:after {
   left: calc(50% + 5px + 1px);
 }
 
+/* Sun and moon */
+#celestial {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+}
+@media only screen and (min-width: 768px) {
+  #celestial {
+    top: calc(120px * 0.625);
+    left: calc(100px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #celestial {
+    top: 120px;
+    left: 100px;
+  }
+}
+
+.sun, .moon {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media only screen and (min-width: 768px) {
+  .sun, .moon {
+    width: calc(200px * 0.625);
+    height: calc(200px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .sun, .moon {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.moon {
+  top: -320px;
+}
+
+.sun {
+  top: 0;
+}
+
+.night .sun {
+  top: -320px;
+}
+
+.night .moon {
+  top: 0;
+}
 
 /* Building of houses */
 #building {
-  padding: 0 70px;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 1760px;
+  width: auto;
+}
+@media only screen and (min-width: 768px) {
+  #building {
+    height: calc(1760px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #building {
+    height: 1760px;
+  }
 }
 
 .level {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  width: 319px;
+}
+@media only screen and (min-width: 768px) {
+  .level {
+    width: calc(510px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level {
+    width: 510px;
+  }
 }
 
+.level1 {
+  z-index: 1;
+  margin-right: 62px;
+}
+@media only screen and (min-width: 768px) {
+  .level1 {
+    margin-right: calc(62px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level1 {
+    margin-right: 62px;
+  }
+}
 .level2 {
-  margin-top: -550px;
+  z-index: 2;
+  margin-left: 224px;
 }
-
+@media only screen and (min-width: 768px) {
+  .level2 {
+    margin-left: calc(224px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level2 {
+    margin-left: 224px;
+  }
+}
 .level3 {
-  margin-top: -770px;
+  z-index: 3;
+  margin-right: 510px;
 }
-
-.level__house {
-  position: relative;
-  font-size: 0;
-  line-height: 0;
-  width: 500px;
-  min-width: 500px;
+@media only screen and (min-width: 768px) {
+  .level3 {
+    margin-right: calc(510px * 0.625);
+  }
 }
-
-.level1 .level__house {
-  margin-right: 162px;
+@media only screen and (min-width: 1280px) {
+  .level3 {
+    margin-right: 510px;
+  }
 }
-
-.level2 .level__house {
-  margin-left: 162px;
+.level4 {
+  z-index: 4;
+  margin-left: 510px;
 }
-
-.level3 .level__house {
-  margin-right: 704px;
+@media only screen and (min-width: 768px) {
+  .level4 {
+    margin-left: calc(510px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level4 {
+    margin-left: 510px;
+  }
 }
 
 .window {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 156px;
+  height: 156px;
   background: #314c7c;
-  top: 150px;
-  right: 40px;
+  overflow: hidden;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .window {
+    width: calc(156px * 0.625);
+    height: calc(156px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .window {
+    width: 156px;
+    height: 156px;
+  }
 }
 
+.level1 .window {
+  left: 60px;
+  top: 177px;
+}
+@media only screen and (min-width: 768px) {
+  .level1 .window {
+    left: calc(60px * 0.625);
+    top: calc(177px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level1 .window {
+    left: 60px;
+    top: 177px;
+  }
+}
+.level2 .window {
+  left: 294px;
+  top: 547px;
+}
+@media only screen and (min-width: 768px) {
+  .level2 .window {
+    left: calc(294px * 0.625);
+    top: calc(547px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level2 .window {
+    left: 294px;
+    top: 547px;
+  }
+}
+.level3 .window {
+  left: 60px;
+  top: 910px;
+}
+@media only screen and (min-width: 768px) {
+  .level3 .window {
+    left: calc(60px * 0.625);
+    top: calc(910px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level3 .window {
+    left: 60px;
+    top: 910px;
+  }
+}
+.level4 .window {
+  left: 294px;
+  top: 1274px;
+}
+@media only screen and (min-width: 768px) {
+  .level4 .window {
+    left: calc(294px * 0.625);
+    top: calc(1274px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .level4 .window {
+    left: 294px;
+    top: 1274px;
+  }
+}
+
+/* Window scene */
 .window img {
   width: 100%;
   height: 100%;
 }
 
-.night .window img {
-  opacity: 0;
+@media only screen and (min-width: 1280px) {
+  .night .window img {
+    opacity: 0;
+  }
 }
 
-.house {
+.night-scene {
+  display: none;
+}
+
+.night .day-scene {
+  display: none;
+}
+
+.night .night-scene {
+  display: block;
+}
+
+/* Window light */
+@media only screen and (min-width: 1280px) {
+  .level .house .light {
+    opacity: 0;
+  }
+}
+
+/* Snow hill */
+.snowhill {
   position: relative;
-}
-
-.level .house .side {
-  fill: beige;
-}
-
-.level .house .roof {
-  fill: salmon;
-}
-.level .house .front {
-  fill: pink;
-}
-.level .house .window {
-  fill: white;
-}
-.level .house .light {
-  fill: pink;
-  opacity: 1;
-}
-
-.night .level .house .side {
-  fill: #D5D6D7;
-}
-.night .level .house .roof {
-  fill: #2B4B80;
-}
-.night .level .house .front {
-  fill: #3D8FBF;
-}
-.night .level .house .window {
-  fill: #FAD9C7;
-}
-.night .level .house .light {
-  fill: #D5D6D7;
-  opacity: 0;
+  margin-top: -100px;
 }
 
 /* Snow field */
 .snowfield {
-  height: 500px;
-  background: white;
-  margin: 0 -60px;
-  margin-top: -250px;
-  opacity: .99;
+  position: relative;
+  background: #e9e9e9;
+  z-index: 5;
+  padding: 200px 0;
+}
+@media only screen and (min-width: 768px) {
+  .snowfield {
+    padding: calc(200px * 0.625) 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .snowfield {
+    padding: 200px 0;
+  }
 }
 
+/* Greetings */
+.greetings {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .greetings {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .greetings {
+    max-width: 1020px;
+  }
+}
+
+.text {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .text {
+    max-width: 600px;
+  }
+}
+
+.logo {
+  width: 200px;
+  margin-top: 100px;
+}
+
+/* Trees */
+.tree {
+  display: none;
+}
+@media only screen and (min-width: 1280px) {
+  .tree {
+    display: block;
+  }
+}
+
+.tree1 {
+  width: 200px;
+  position: absolute;
+  top: -230px;
+  left: 40px;
+}
+.tree2 {
+  width: 200px;
+  position: absolute;
+  top: -230px;
+  right: 40px;
+}
+
+.tree3 {
+  width: 280px;
+  position: absolute;
+  bottom: 200px;
+  right: 150px;
+}
 
 /* Animation*/
 .animated {
@@ -239,6 +561,7 @@ body.night .toggle + .toggle-button:after {
   animation-fill-mode: both;
 }
 
+/* Window light flash animation */
 @-webkit-keyframes flash {
   0% {
     opacity: 0;
@@ -270,4 +593,42 @@ body.night .toggle + .toggle-button:after {
 .flash {
   -webkit-animation-name: flash;
   animation-name: flash;
+}
+
+
+/* Sun and moon slide up and down switch animation */
+@keyframes slideOut {
+  0% {
+    top: 0;
+  }
+
+  50%, 100% {
+    top: -320px;
+  }
+}
+
+@keyframes slideIn {
+  0%, 60% {
+    top: -320px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.slideOutAndIn .moon{
+  animation-name: slideOut;
+}
+
+.slideOutAndIn .sun{
+  animation-name: slideIn;
+}
+
+.night .slideOutAndIn .moon{
+  animation-name: slideIn;
+}
+
+.night .slideOutAndIn .sun{
+  animation-name: slideOut;
 }

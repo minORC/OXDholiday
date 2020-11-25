@@ -2,49 +2,77 @@ $(document).ready(function($) {
 
   /* Day/Night Toggle */
   $("#daynightToggleSwitch").on("click", function () {
+
     if ( $("body").hasClass("night") ) {
       $("body").removeClass("night");
+      $(".night-scene").removeClass("animated flash");
+      $(".light").removeClass("animated flash");
     } else {
       $("body").addClass("night");
     }
-    //TODO: Reset night animations on toggle to day and back to night
+
+    $("#celestial").addClass("slideOutAndIn");
   });
 
   /* Parallax */
-  var rellax = new Rellax('.rellax', {
-    center:true
+  var rellax;
+  rellax = new Rellax('.rellax', {
   });
 
-
   /* Animation triggers */
-  //house1
-  $('.level1').waypoint(function(direction) {
-    if ( $("body").hasClass("night") && direction === 'down') {
-      $('.level1 .window img', ).addClass('animated flash');
-      $('.level1 .light').addClass('animated flash');
-    }
-  }, {
-		offset: '10%'
-	});
+  function initWaypoints() {
+    $(".level1 .house").waypoint(function(direction) {
+      if ( $("body").hasClass("night") && direction === "down") {
+        $(".level1 .night-scene").addClass("animated flash");
+        $(".level1 .light").addClass("animated flash");
+      }
+    }, {
+  		offset: '10%'
+    });
 
-  //house2
-  $('.night .level2').waypoint(function(direction) {
-    if ( $("body").hasClass("night") && direction === 'down') {
-      $('.level2 .window img').addClass('animated flash');
-      $('.level2 .light').addClass('animated flash');
-    }
-  }, {
-		offset: '20%'
-	});
+    $(".level2 .house").waypoint(function(direction) {
+      if ( $("body").hasClass("night") && direction === "down") {
+        $(".level2 .night-scene").addClass("animated flash");
+        $(".level2 .light").addClass("animated flash");
+      }
+    }, {
+  		offset: '25%'
+    });
 
-  //house3
-  $('.night .level3').waypoint(function(direction) {
-    if ( $("body").hasClass("night") && direction === 'down') {
-      $('.level3 .window img').addClass('animated flash');
-      $('.level3 .light').addClass('animated flash');
-    }
-  }, {
-		offset: '20%'
-	});
+    $(".level3 .house").waypoint(function(direction) {
+      if ( $("body").hasClass("night") && direction === "down") {
+        $(".level3 .night-scene").addClass("animated flash");
+        $(".level3 .light").addClass("animated flash");
+      }
+    }, {
+  		offset: '50%'
+    });
 
+    $(".level4 .house").waypoint(function(direction) {
+      if ( $("body").hasClass("night") && direction === "down") {
+        $(".level4 .night-scene").addClass("animated flash");
+        $(".level4 .light").addClass("animated flash");
+      }
+    }, {
+  		offset: '35%'
+    });
+  }
+
+  /* Destroy rellax for mobile and tablet */
+  var mediaQuery = window.matchMedia('(max-width: 1279px)')
+
+  function handleResponsive(e) {
+    if (e.matches) {
+      rellax.destroy();
+      Waypoint.destroyAll();
+    }
+    else {
+      initWaypoints();
+      rellax.refresh();
+    }
+  }
+
+
+  mediaQuery.addEventListener('change', handleResponsive);
+  handleResponsive(mediaQuery);
 });

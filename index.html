@@ -14,86 +14,187 @@
       <div class="dayNightToggle">
         <input class='toggle' id='daynightToggleSwitch' type='checkbox'>
         <label class='toggle-button' for='daynightToggleSwitch'>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-            <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+          <svg  id="nightIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200" xml:space="preserve">
+            <path d="M191.4,155.4c3-1.3,5.9-2.7,8.6-4.2c-10.9,16.9-27.2,31.1-47.9,39.8c-54.1,22.8-117.9,0.5-142.4-49.8
+            	C-14.9,91,9.1,31.7,63.2,8.9C84,0.2,106.2-1.9,127,1.7c-3.1,0.9-6.1,2-9.1,3.3C73.2,23.8,53.4,72.7,73.7,114.3
+            	C93.9,155.9,146.7,174.3,191.4,155.4z"/>
           </svg>
 
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" xml:space="preserve">
-            <g id="Sun">
-              <g>
-                <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
-              </g>
-            </g>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 200 200" xml:space="preserve">
+            <rect x="36.92" y="25.91" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -16.9152 40.1225)" width="6.11" height="29.15"/>
+            <rect x="156.97" y="145.96" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -66.642 160.1735)" width="6.11" height="29.15"/>
+            <rect x="0.54" y="97.47" width="29.13" height="6.11"/>
+            <rect x="170.33" y="97.47" width="29.13" height="6.11"/>
+            <path d="M149.39,100.52c0,13.64-5.53,25.99-14.45,34.92c-8.92,8.92-21.27,14.45-34.92,14.45s-25.99-5.53-34.95-14.45
+              c-8.92-8.92-14.45-21.27-14.45-34.92s5.53-25.99,14.45-34.92h0.04c8.96-8.96,21.27-14.49,34.92-14.49
+              c13.61,0,25.96,5.53,34.88,14.49h0.04C143.86,74.53,149.39,86.88,149.39,100.52z"/>
+            <rect x="25.4" y="157.48" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -101.8042 75.2846)" class="st0" width="29.15" height="6.11"/>
+            <rect x="145.45" y="37.43" transform="matrix(0.7071 -0.7071 0.7071 0.7071 18.2469 125.0114)" width="29.15" height="6.11"/>
+            <rect x="96.96" y="170.84" width="6.11" height="29.16"/>
+            <rect x="96.96" y="1.05" width="6.11" height="29.13"/>
           </svg>
         </label>
       </div>
     </div>
 
+    <div id="celestial" class="rellax" data-rellax-speed="-4" data-rellax-max="120px">
+      <div class="sun">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" xml:space="preserve">
+          <circle class="lightest-grey" cx="100" cy="100" r="100"/>
+        </svg>
+      </div>
+      <div class="moon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" xml:space="preserve">
+          <path class="lightest-grey" d="M191.4,155.4c3-1.3,5.9-2.7,8.6-4.2c-10.9,16.9-27.2,31.1-47.9,39.8c-54.1,22.8-117.9,0.5-142.4-49.8
+          	C-14.9,91,9.1,31.7,63.2,8.9C84,0.2,106.2-1.9,127,1.7c-3.1,0.9-6.1,2-9.1,3.3C73.2,23.8,53.4,72.7,73.7,114.3
+          	C93.9,155.9,146.7,174.3,191.4,155.4z"/>
+        </svg>
+      </div>
+    </div>
+
     <div id="building">
-
-      <div class="level level1">
-      <div class="level__house">
-        <div class="window">
-          <img class="rellax" src="images/day1.jpg" alt="inside window 1"  data-rellax-speed="-0.7"/>
+      <div class="level level1 rellax" data-rellax-percentage="0.5" data-rellax-speed="2" >
+        <div class="window rellax" data-rellax-percentage="0.5" data-rellax-speed="-0.8" data-rellax-min="-9" data-rellax-max="9">
+          <img class="day-scene" src="images/day1.jpg" />
+          <img class="night-scene" src="images/night1.jpg" />
         </div>
-
-        <svg class="house" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 221.9 439.4" xml:space="preserve">
-          <path class="light" d="190.3,78.9 221.8,118.1 221.8,254.7 132.1,137.4 190.3,137.4 "/>
-          <path class="side" d="M0.1,79.3h98.4v360.1H0.1V79.3z"/>
-          <path class="roof" d="M0,79.3h98.5L162.6,0H62.8L0,79.3z"/>
-          <path class="front" d="M222,439.4l-0.1-360c0-0.1,0-0.2-0.1-0.3l0,0L162.9,0.4c-0.2-0.2-0.5-0.2-0.7,0L98.6,79.2
-          	c-0.1,0.1-0.1,0.2-0.1,0.3V156l0,0v283.4H222z M188.3,135.4h-58.5V77h58.5V135.4z"/>
-          <path class="window" d="M188.3,77v58.5l0,0H130l2.1,2.1h58.2l0,0V79L188.3,77z"/>
-          <path class="light" d="M190.3,78.9l31.5,39.2v136.6l-89.7-117.3l58.2,0L190.3,78.9z"/>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 1760" xml:space="preserve">
+          <g class="house" data-rellax-speed="3" data-rellax-min="0" >
+           <path class="front blue" d="M286.2,376.4l-0.1-10.8h0.1V187.3c0-0.1,0-0.2-0.1-0.4c0-0.1-0.1-0.2-0.2-0.3L143.3,2L0.2,186.5
+		c-0.1,0.2-0.2,0.4-0.2,0.6L0,222l0,1538h289.7L286.2,376.4z M70,186.7h136.2v136.2H70V186.7z"/>
+           <path class="roof dark-blue" d="M510,186.9H286L143.3,2.1h223L510,186.9z"/>
+           <path class="side light-grey" d="M510,186.9V1760H286.6V186.9H510z"/>
+           <path class="sill light-grey" d="M70,186.7v136.2l0.1-0.1h136.1l-3.4,4.9H65.1V193.2L70,186.7z"/>
+           <path class="light light-grey"  d="M206.3,323L0.1,600.7V281.9L70,186.6v136.3L206.3,323z"/>
+         </g>
         </svg>
       </div>
-    </div>
 
-      <div class="level level2">
-      <div class="level__house rellax" data-rellax-speed="4" data-rellax-min="40">
-
-        <div class="window">
-          <img class="rellax" src="images/day2.jpg" alt="inside window 2"  data-rellax-speed="-0.7" />
+      <div class="level level2 rellax" data-rellax-percentage="0.5" data-rellax-speed="1" >
+        <div class="window rellax" data-rellax-percentage="0.5" data-rellax-speed="-0.8" data-rellax-min="-9" data-rellax-max="9">
+          <img class="day-scene" src="images/day2.jpg" data-rellax-speed="-0.7" />
+          <img class="night-scene" src="images/night2.jpg" />
         </div>
-
-        <svg class="house" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 221.9 439.4" xml:space="preserve">
-          <path class="light" d="190.3,78.9 221.8,118.1 221.8,254.7 132.1,137.4 190.3,137.4 "/>
-          <path class="side" d="M0.1,79.3h98.4v360.1H0.1V79.3z"/>
-          <path class="roof" d="M0,79.3h98.5L162.6,0H62.8L0,79.3z"/>
-          <path class="front" d="M222,439.4l-0.1-360c0-0.1,0-0.2-0.1-0.3l0,0L162.9,0.4c-0.2-0.2-0.5-0.2-0.7,0L98.6,79.2
-          	c-0.1,0.1-0.1,0.2-0.1,0.3V156l0,0v283.4H222z M188.3,135.4h-58.5V77h58.5V135.4z"/>
-          <path class="window" d="M188.3,77v58.5l0,0H130l2.1,2.1h58.2l0,0V79L188.3,77z"/>
-          <path class="light" d="M190.3,78.9l31.5,39.2v136.6l-89.7-117.3l58.2,0L190.3,78.9z"/>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 1760" xml:space="preserve">
+          <g class="house">
+           <path class="front blue" d="M220.3,1760H510V592.8v-34.9c0-0.2-0.1-0.4-0.2-0.6L366.7,372.8L224.1,557.4
+         		c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.3-0.1,0.4v178.3h0.1l-0.1,10.8L220.3,1760z M440,693.7H303.9V557.5H440V693.7z"/>
+           <path class="roof dark-blue" d="M0,557.7h224l142.7-184.8h-223L0,557.7z"/>
+           <path class="side light-grey" d="M0,557.7L0,1760h223.4V557.7H0z"/>
+           <path class="sill light-grey" d="M440,557.5v136.2l-0.1-0.1H303.9l3.4,4.9h137.7V564L440,557.5z"/>
+           <path class="light light-grey" d="M303.7,693.8l206.2,277.7V652.7L440,557.4v136.3L303.7,693.8z"/>
+         </g>
         </svg>
       </div>
-    </div>
 
-      <div class="level level3">
-      <div class="level__house rellax" data-rellax-speed="7" data-rellax-min="95">
-
-        <div class="window">
-          <img class="rellax" src="images/day3.jpg" alt="inside window 2"  data-rellax-speed="-0.7" data-rellax-max="20" />
+      <div class="level level3 rellax" data-rellax-percentage="0.5" data-rellax-speed="6" data-rellax-min="0" >
+        <div class="window rellax" data-rellax-percentage="0.5" data-rellax-speed="-0.8" data-rellax-min="-9" data-rellax-max="9">
+          <img class="day-scene" src="images/day3.jpg" data-rellax-speed="-0.7" />
+          <img class="night-scene" src="images/night3.jpg" />
         </div>
-
-        <svg class="house" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 221.9 439.4" xml:space="preserve">
-          <path class="light" d="190.3,78.9 221.8,118.1 221.8,254.7 132.1,137.4 190.3,137.4 "/>
-          <path class="side" d="M0.1,79.3h98.4v360.1H0.1V79.3z"/>
-          <path class="roof" d="M0,79.3h98.5L162.6,0H62.8L0,79.3z"/>
-          <path class="front" d="M222,439.4l-0.1-360c0-0.1,0-0.2-0.1-0.3l0,0L162.9,0.4c-0.2-0.2-0.5-0.2-0.7,0L98.6,79.2
-            c-0.1,0.1-0.1,0.2-0.1,0.3V156l0,0v283.4H222z M188.3,135.4h-58.5V77h58.5V135.4z"/>
-          <path class="window" d="M188.3,77v58.5l0,0H130l2.1,2.1h58.2l0,0V79L188.3,77z"/>
-          <path class="light" d="M190.3,78.9l31.5,39.2v136.6l-89.7-117.3l58.2,0L190.3,78.9z"/>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 1760" xml:space="preserve">
+          <g class="house">
+            <path class="front light-grey" d="M286.2,1109.2l-0.1-10.8h0.1V920.1c0-0.1,0-0.2-0.1-0.4c0-0.1-0.1-0.2-0.2-0.3L143.3,734.8
+          		L0.2,919.3c-0.1,0.2-0.2,0.4-0.2,0.6l0,34.9L0,1760h289.7L286.2,1109.2z M70,919.5h136.2v136.2H70V919.5z"/>
+            <path class="roof dark-blue" d="M510,919.7H286L143.3,734.9h223L510,919.7z"/>
+            <path class="side blue" d="M510,919.7V1760H286.6V919.7H510z"/>
+            <path class="sill blue" d="M70,919.5v136.2l0.1-0.1h136.1l-3.4,4.9H65.1V926L70,919.5z"/>
+            <path class="light blue" d="M206.3,1055.8L0.1,1333.5v-318.8L70,919.4v136.3L206.3,1055.8z"/>
+          </g>
         </svg>
       </div>
+
+      <div class="level level4 rellax" data-rellax-percentage="0.5" data-rellax-speed="3" data-rellax-min="0" >
+        <div class="window rellax" data-rellax-percentage="0.5" data-rellax-speed="-0.8" data-rellax-min="-9" data-rellax-max="9">
+          <img class="day-scene" src="images/day4.jpg" data-rellax-speed="-0.7" />
+          <img class="night-scene" src="images/night4.jpg" />
+        </div>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 1760" xml:space="preserve">
+          <g class="house">
+           <path class="front blue" d="M220.3,1760.1H510v-441.3v-34.9c0-0.2-0.1-0.4-0.2-0.6l-143.1-184.5l-142.6,184.6
+          		c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.3-0.1,0.4v178.3h0.1l-0.1,10.8L220.3,1760.1z M440,1419.7l-136.2,0v-136.2l136.2,0
+          		V1419.7z"/>
+           <path class="roof dark-blue" d="M0,1283.7h224l142.7-184.8h-223L0,1283.7z"/>
+           <path class="side light-grey" d="M0,1283.7l0,476.4h223.4v-476.4H0z"/>
+           <path class="sill light-grey" d="M440,1283.5v136.2l-0.1-0.1l-136.1,0l3.4,4.9l137.7,0V1290L440,1283.5z"/>
+           <path class="light light-grey" d="M303.7,1419.8l206.2,277.7v-318.8l-69.9-95.3v136.3L303.7,1419.8z"/>
+         </g>
+       </svg>
+      </div>
     </div>
-
+    <div class="snowhill">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1440 150" xml:space="preserve" style="fill:#e9e9e9;">
+      <path d="M1440,108.3l-1,41.7H0l1-41.7C200.8,40.3,450.1,0,720.5,0C990.9,0,1240.2,40.3,1440,108.3z"/>
+      </svg>
     </div>
-
-
-
-
-
     <div class="snowfield">
+      <div class="tree tree1">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 185.95 276.47" xml:space="preserve">
+        <style type="text/css">
+        	.st0{fill:#D3E1C6;}
+        	.st1{fill:#9BCD6C;}
+        	.st2{fill:#409C46;}
+        	.st3{fill:#0A2B1A;}
+        	.st4{fill:#181818;}
+        </style>
+        <polygon class="st0" points="169.67,102.12 16.29,102.12 94.26,0 114.59,27.53 "/>
+        <polygon class="st1" points="92.26,102.12 41.14,169.07 5.13,169.07 56.25,102.12 "/>
+        <polygon class="st2" points="180.83,169.07 41.14,169.07 92.26,102.12 131.4,102.12 "/>
+        <polygon class="st3" points="185.95,222.93 0,222.93 41.13,169.07 146.18,169.07 "/>
+        <rect x="81.8" y="222.93" class="st4" width="22.35" height="53.54"/>
+        </svg>
+      </div>
+
+      <div class="tree tree2">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 185.95 276.47" xml:space="preserve">
+        <style type="text/css">
+        	.st0{fill:#D3E1C6;}
+        	.st1{fill:#9BCD6C;}
+        	.st2{fill:#409C46;}
+        	.st3{fill:#0A2B1A;}
+        	.st4{fill:#181818;}
+        </style>
+        <polygon class="st0" points="169.67,102.12 16.29,102.12 94.26,0 114.59,27.53 "/>
+        <polygon class="st1" points="92.26,102.12 41.14,169.07 5.13,169.07 56.25,102.12 "/>
+        <polygon class="st2" points="180.83,169.07 41.14,169.07 92.26,102.12 131.4,102.12 "/>
+        <polygon class="st3" points="185.95,222.93 0,222.93 41.13,169.07 146.18,169.07 "/>
+        <rect x="81.8" y="222.93" class="st4" width="22.35" height="53.54"/>
+        </svg>
+      </div>
+      <div class="greetings">
+        <div class="text">
+          <h1>Sending cheer <br/> from a distance</h1>
+          <p>We may be staying connected a little differently this season, but we can still wish you happiness, health, and cheer.</p>
+        </div>
+        <div class="logo">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 84" xml:space="preserve">
+  				<g id="logo-black">
+  				  <path d="M280,2h-36v80h36c22.09,0,40-17.91,40-40S302.09,2,280,2z"/>
+  				  <circle cx="42" cy="42" r="42"/>
+  				  <polygon points="116,2 156,42 116,82 204,82 164,42 204,2 "/>
+  				</g>
+  				</svg>
+        </div>
+      </div>
+      <div class="tree tree3">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 185.95 276.47" xml:space="preserve">
+        <style type="text/css">
+        	.st0{fill:#D3E1C6;}
+        	.st1{fill:#9BCD6C;}
+        	.st2{fill:#409C46;}
+        	.st3{fill:#0A2B1A;}
+        	.st4{fill:#181818;}
+        </style>
+        <polygon class="st0" points="169.67,102.12 16.29,102.12 94.26,0 114.59,27.53 "/>
+        <polygon class="st1" points="92.26,102.12 41.14,169.07 5.13,169.07 56.25,102.12 "/>
+        <polygon class="st2" points="180.83,169.07 41.14,169.07 92.26,102.12 131.4,102.12 "/>
+        <polygon class="st3" points="185.95,222.93 0,222.93 41.13,169.07 146.18,169.07 "/>
+        <rect x="81.8" y="222.93" class="st4" width="22.35" height="53.54"/>
+        </svg>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
