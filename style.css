@@ -1,13 +1,33 @@
 /*
-background-day: #233963;
-toggle-day: #314c7c;
-toggle-night: #7bb4d5;
-dark-blue: #314c7c;
-blue: #528fbc;
-light-grey: #d6d7d8;
-lightest-grey: #e5e5e5;
-snow-white: #e9e9e9;
+background-day
+fill: #233963;
 
+toggle-day
+fill: #314c7c;
+
+toggle-night
+fill: #7bb4d5;
+
+dark-blue
+fill: #314c7c;
+
+blue
+fill: #528fbc;
+
+mobile blue
+fill: #2577a9;
+
+mobile light-blue
+fill: #57acd1;
+
+light-grey
+fill: #d6d7d8;
+
+lightest-grey
+fill: #e5e5e5;
+
+snow-white
+fill: #e9e9e9;
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
@@ -32,17 +52,6 @@ div {
 .lightest-grey {
   fill: #e5e5e5;
 }
-
-.night .dark-blue {
-  fill: #314c7c;
-}
-.night .blue {
-  fill: #528fbc;
-}
-.night .light-grey {
-  fill: #d6d7d8;
-}
-
 
 /* Global styles */
 html {
@@ -102,7 +111,13 @@ body.night {
 #dayNightControls {
   display: flex;
   justify-content: flex-end;
-  padding: 60px;
+  padding: 40px 40px 100px;
+}
+
+@media only screen and (min-width: 1280px) {
+  #dayNightControls {
+    padding: 60px;
+  }
 }
 
 .dayNightToggle {
@@ -202,26 +217,26 @@ body.night .toggle + .toggle-button:after {
 /* Sun and moon */
 #celestial {
   position: absolute;
-  top: 120px;
-  left: 100px;
+  left: 20px;
+  top: 80px;
 }
 @media only screen and (min-width: 768px) {
   #celestial {
-    top: calc(120px * 0.625);
     left: calc(100px * 0.625);
+    top: calc(120px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
   #celestial {
-    top: 120px;
     left: 100px;
+    top: 120px;
   }
 }
 
 .sun, .moon {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: calc(200px * 0.3725);
+  height: calc(200px * 0.3725);
   -webkit-animation-duration: 0.7s;
   animation-duration: 0.7s;
   -webkit-animation-fill-mode: both;
@@ -260,83 +275,81 @@ body.night .toggle + .toggle-button:after {
 #building {
   padding: 0;
   position: relative;
-  display: flex;
-  justify-content: center;
   margin: 0 auto;
-  height: 1760px;
-  width: auto;
+  width: calc((510px * 0.3725) + 53px);
+  height: calc(1760px * 0.3725);
 }
 @media only screen and (min-width: 768px) {
   #building {
+    width: calc(1020px * 0.625);
     height: calc(1760px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
   #building {
+    width: 1020px;
     height: 1760px;
   }
 }
 
 .level {
   position: absolute;
-  width: 319px;
+  width: calc(510px * 0.3725);
+  height: calc(1760px * 0.3725);
 }
 @media only screen and (min-width: 768px) {
   .level {
     width: calc(510px * 0.625);
+    height: calc(1760px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
   .level {
     width: 510px;
+    height: 1760px;
   }
 }
 
 .level1 {
   z-index: 1;
-  margin-right: 62px;
+  margin: 0;
 }
 @media only screen and (min-width: 768px) {
   .level1 {
-    margin-right: calc(62px * 0.625);
+    margin-left: calc(223px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
   .level1 {
-    margin-right: 62px;
+    margin-left: 223px;
   }
 }
 .level2 {
   z-index: 2;
-  margin-left: 224px;
+  margin-left: 53px;
 }
 @media only screen and (min-width: 768px) {
   .level2 {
-    margin-left: calc(224px * 0.625);
+    margin-left: calc(366px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
   .level2 {
-    margin-left: 224px;
+    margin-left: 366px;
   }
 }
 .level3 {
   z-index: 3;
-  margin-right: 510px;
+  margin: 0;
 }
 @media only screen and (min-width: 768px) {
   .level3 {
-    margin-right: calc(510px * 0.625);
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .level3 {
-    margin-right: 510px;
+    margin-left: 0;
   }
 }
 .level4 {
   z-index: 4;
-  margin-left: 510px;
+  margin-left: 53px;
 }
 @media only screen and (min-width: 768px) {
   .level4 {
@@ -349,13 +362,62 @@ body.night .toggle + .toggle-button:after {
   }
 }
 
+/* House color fills - mobile */
+.house .roof {
+  fill: #314c7c;
+}
+
+/* light-grey */
+.level1 .house .front,
+.level3 .house .side,
+.level4 .house .side,
+.sill,
+.light {
+  fill: #d6d7d8;
+}
+
+/* mobile light-blue */
+.level1 .house .side,
+.level2 .house .front,
+.level3 .house .front,
+.level1 .sill,
+.level1 .light {
+  fill: #57acd1;
+}
+
+/* mobile blue */
+.level2 .house .side,
+.level4 .house .front {
+  fill: #2577a9;
+}
+
+/* House color fills - tablet and desktop */
+@media only screen and (min-width: 768px) {
+  /* light-grey */
+  .level1 .house .side,
+  .level2 .house .side,
+  .level4 .house .side,
+  .level1 .light,
+  .level1 .sill {
+    fill: #d6d7d8;
+  }
+
+  /* blue */
+  .level1 .house .front,
+  .level2 .house .front,
+  .level3 .house .side,
+  .level4 .house .front {
+    fill: #528fbc;
+  }
+}
+
 .window {
   position: absolute;
-  width: 156px;
-  height: 156px;
   background: #314c7c;
   overflow: hidden;
   z-index: -1;
+  width: 58px;
+  height: 58px;
 }
 @media only screen and (min-width: 768px) {
   .window {
@@ -371,8 +433,8 @@ body.night .toggle + .toggle-button:after {
 }
 
 .level1 .window {
-  left: 60px;
-  top: 177px;
+  left: 22px;
+  top: 66px;
 }
 @media only screen and (min-width: 768px) {
   .level1 .window {
@@ -387,8 +449,8 @@ body.night .toggle + .toggle-button:after {
   }
 }
 .level2 .window {
-  left: 294px;
-  top: 547px;
+  left: 108px;
+  top: 202px;
 }
 @media only screen and (min-width: 768px) {
   .level2 .window {
@@ -403,8 +465,8 @@ body.night .toggle + .toggle-button:after {
   }
 }
 .level3 .window {
-  left: 60px;
-  top: 910px;
+  left: 22px;
+  top: 340px;
 }
 @media only screen and (min-width: 768px) {
   .level3 .window {
@@ -419,8 +481,8 @@ body.night .toggle + .toggle-button:after {
   }
 }
 .level4 .window {
-  left: 294px;
-  top: 1274px;
+  left: 108px;
+  top: 474px;
 }
 @media only screen and (min-width: 768px) {
   .level4 .window {
@@ -461,7 +523,7 @@ body.night .toggle + .toggle-button:after {
 
 /* Window light */
 @media only screen and (min-width: 1280px) {
-  .level .house .light {
+  .light {
     opacity: 0;
   }
 }
@@ -469,7 +531,12 @@ body.night .toggle + .toggle-button:after {
 /* Snow hill */
 .snowhill {
   position: relative;
-  margin-top: -100px;
+  margin-top: -60px;
+}
+@media only screen and (min-width: 1280px) {
+  .snowhill {
+    margin-top: -60px;
+  }
 }
 
 /* Snow field */
@@ -477,7 +544,7 @@ body.night .toggle + .toggle-button:after {
   position: relative;
   background: #e9e9e9;
   z-index: 5;
-  padding: 200px 0;
+  padding: calc(200px * 0.3725) 0;
 }
 @media only screen and (min-width: 768px) {
   .snowfield {
@@ -492,13 +559,13 @@ body.night .toggle + .toggle-button:after {
 
 /* Greetings */
 .greetings {
-  width: 100%;
+  width: calc((510px * 0.3725) + 53px);
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
   .greetings {
-    max-width: 600px;
+    width: 600px;
     margin: 0 auto;
   }
 }
@@ -514,13 +581,19 @@ body.night .toggle + .toggle-button:after {
 }
 @media only screen and (min-width: 768px) {
   .text {
-    max-width: 600px;
+    width: 600px;
   }
 }
 
 .logo {
-  width: 200px;
-  margin-top: 100px;
+  width: calc(200px * 0.3725);
+  margin-top: calc(100px * 0.3725);
+}
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 200px;
+    margin-top: 100px;
+  }
 }
 
 /* Trees */
@@ -536,13 +609,13 @@ body.night .toggle + .toggle-button:after {
 .tree1 {
   width: 200px;
   position: absolute;
-  top: -230px;
+  top: -260px;
   left: 40px;
 }
 .tree2 {
   width: 200px;
   position: absolute;
-  top: -230px;
+  top: -260px;
   right: 40px;
 }
 
