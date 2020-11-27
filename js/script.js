@@ -59,7 +59,7 @@ $(document).ready(function($) {
   }
 
   /* Destroy rellax for mobile and tablet */
-  var mediaQuery = window.matchMedia('(max-width: 1279px)')
+  var mediaQuery = window.matchMedia("(max-width: 1279px)");
 
   function handleResponsive(e) {
     if (e.matches) {
@@ -72,7 +72,16 @@ $(document).ready(function($) {
     }
   }
 
+  function setSnowhillSize(){
+    var windowWidth = window.innerWidth;
+    console.log("Window width is " + windowWidth);
+    $(".snowhill").css("width", windowWidth);
+    $(".snowhill").css("height", (150/1440) * windowWidth + "px");
+  }
 
-  mediaQuery.addEventListener('change', handleResponsive);
+  mediaQuery.addEventListener("change", handleResponsive);
+  $(window).on("resize", setSnowhillSize);
+
   handleResponsive(mediaQuery);
+  setSnowhillSize();
 });

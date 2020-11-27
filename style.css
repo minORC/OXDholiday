@@ -39,20 +39,6 @@ div {
   line-height: 0;
 }
 
-/* Fill colors for houses*/
-.dark-blue {
-  fill: salmon;
-}
-.blue {
-  fill: pink;
-}
-.light-grey {
-  fill: beige;
-}
-.lightest-grey {
-  fill: #e5e5e5;
-}
-
 /* Global styles */
 html {
   font-size: 62.5%;
@@ -363,50 +349,106 @@ body.night .toggle + .toggle-button:after {
 }
 
 /* House color fills - mobile */
+/* salmon */
 .house .roof {
+  fill: #F0706E;
+}
+
+/* darkest blue */
+.night .house .roof {
   fill: #314c7c;
 }
 
-/* light-grey */
+/* beige */
 .level1 .house .front,
 .level3 .house .side,
 .level4 .house .side,
 .sill,
 .light {
+  /* fill: #f5f5dc; */
+  fill: #EBEBD3;
+}
+
+/* light-grey */
+.night .level1 .house .front,
+.night .level3 .house .side,
+.night .level4 .house .side,
+.night .sill,
+.night .light {
   fill: #d6d7d8;
 }
 
-/* mobile light-blue */
+/* mobile light-pink */
 .level1 .house .side,
 .level2 .house .front,
 .level3 .house .front,
 .level1 .sill,
 .level1 .light {
+  fill: #ffc0cb;
+}
+
+/* mobile light-blue */
+.night .level1 .house .side,
+.night .level2 .house .front,
+.night .level3 .house .front,
+.night .level1 .sill,
+.night .level1 .light {
   fill: #57acd1;
 }
 
-/* mobile blue */
+/* mobile pink */
 .level2 .house .side,
 .level4 .house .front {
+  /* fill: #FF8FA6; */
+  fill: #FC8DA7;
+}
+
+/* mobile blue */
+.night .level2 .house .side,
+.night .level4 .house .front {
   fill: #2577a9;
 }
 
 /* House color fills - tablet and desktop */
 @media only screen and (min-width: 768px) {
-  /* light-grey */
+  /* beige */
   .level1 .house .side,
   .level2 .house .side,
+  .level3 .house .front,
   .level4 .house .side,
   .level1 .light,
   .level1 .sill {
+    /* fill: #f5f5dc; */
+    fill: #EBEBD3;
+  }
+
+  /* light-grey */
+  .night .level1 .house .side,
+  .night .level2 .house .side,
+  .night .level3 .house .front,
+  .night .level4 .house .side,
+  .night .level1 .light,
+  .night .level1 .sill {
     fill: #d6d7d8;
   }
 
-  /* blue */
+  /* pink */
   .level1 .house .front,
   .level2 .house .front,
   .level3 .house .side,
-  .level4 .house .front {
+  .level4 .house .front,
+  .level3 .house .light,
+  .level3 .house .sill {
+    fill: #ffc0cb;
+  }
+
+  /* blue */
+  .night .level1 .house .front,
+  .night .level2 .house .front,
+  .night .level3 .house .side,
+  .night .level4 .house .front,
+  .night .level3 .house .light,
+  .night .level3 .house .sill {
     fill: #528fbc;
   }
 }
@@ -573,7 +615,7 @@ body.night .toggle + .toggle-button:after {
 
 @media only screen and (min-width: 1280px) {
   .greetings {
-    max-width: 1020px;
+    width: 1020px;
   }
 }
 
@@ -588,11 +630,13 @@ body.night .toggle + .toggle-button:after {
 
 .logo {
   width: calc(200px * 0.3725);
+  height: calc(52.5px * 0.3725);
   margin-top: calc(100px * 0.3725);
 }
 @media only screen and (min-width: 768px) {
   .logo {
     width: 200px;
+    height: 52.5px;
     margin-top: 100px;
   }
 }
@@ -606,22 +650,23 @@ body.night .toggle + .toggle-button:after {
     display: block;
   }
 }
-
 .tree1 {
   width: 200px;
+  height: 297.36px;
   position: absolute;
   top: -260px;
   left: 40px;
 }
 .tree2 {
   width: 200px;
+  height: 297.36px;
   position: absolute;
   top: -260px;
   right: 40px;
 }
-
 .tree3 {
   width: 280px;
+  height: 416.3px;
   position: absolute;
   bottom: 200px;
   right: 150px;
