@@ -51,6 +51,9 @@ html, body{
 body {
   background: #7bb4d5;
   -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -ms-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
   transition: background-color .5s ease-out;
 }
 
@@ -160,6 +163,9 @@ body.night {
   height: 40px;
   position: relative;
   -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
   border: 2px solid #314c7c;
   border-radius: 20px;
@@ -185,6 +191,9 @@ body.night .toggle + .toggle-button {
 
 .toggle + .toggle-button:after {
   -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
   background: #314c7c;
   content: "";
@@ -458,91 +467,109 @@ body.night .toggle + .toggle-button:after {
   background: #314c7c;
   overflow: hidden;
   z-index: -1;
-  width: 58px;
-  height: 58px;
+  width: 51px;
+  height: 51px;
 }
 @media only screen and (min-width: 768px) {
   .window {
-    width: calc(156px * 0.625);
-    height: calc(156px * 0.625);
+    width: calc(137px * 0.625);
+    height: calc(137px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
   .window {
-    width: 156px;
-    height: 156px;
+    width: 137px;
+    height: 137px;
   }
 }
 
-.level1 .window {
-  left: 22px;
-  top: 66px;
+.window1 {
+  left: 26px;
+  top: 70px;
 }
 @media only screen and (min-width: 768px) {
-  .level1 .window {
-    left: calc(60px * 0.625);
-    top: calc(177px * 0.625);
+  .window1 {
+    left: calc(293px * 0.625);
+    top: calc(186px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
-  .level1 .window {
-    left: 60px;
-    top: 177px;
+  .window1 {
+    left: 293px;
+    top: 186px;
   }
 }
-.level2 .window {
-  left: 108px;
-  top: 202px;
+.window2 {
+  left: 166px;
+  top: 208px;
 }
 @media only screen and (min-width: 768px) {
-  .level2 .window {
-    left: calc(294px * 0.625);
-    top: calc(547px * 0.625);
+  .window2 {
+    left: calc(669px * 0.625);
+    top: calc(557px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
-  .level2 .window {
-    left: 294px;
-    top: 547px;
+  .window2 {
+    left: 670px;
+    top: 557px;
   }
 }
-.level3 .window {
-  left: 22px;
-  top: 340px;
+.window3 {
+  left: 26px;
+  top: 343px;
 }
 @media only screen and (min-width: 768px) {
-  .level3 .window {
-    left: calc(60px * 0.625);
-    top: calc(910px * 0.625);
+  .window3 {
+    left: calc(70px * 0.625);
+    top: calc(919px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
-  .level3 .window {
-    left: 60px;
-    top: 910px;
+  .window3 {
+    left: 70px;
+    top: 919px;
   }
 }
-.level4 .window {
-  left: 108px;
-  top: 474px;
+.window4 {
+  left: 166px;
+  top: 478px;
 }
 @media only screen and (min-width: 768px) {
-  .level4 .window {
-    left: calc(294px * 0.625);
-    top: calc(1274px * 0.625);
+  .window4 {
+    left: calc(814px * 0.625);
+    top: calc(1283px * 0.625);
   }
 }
 @media only screen and (min-width: 1280px) {
-  .level4 .window {
-    left: 294px;
-    top: 1274px;
+  .window4 {
+    left: 814px;
+    top: 1283px;
   }
 }
 
 /* Window scene */
 .window img {
-  width: 100%;
-  height: 100%;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .window img {
+    width: calc(137px * 0.625);
+    height: calc(137px * 0.625);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .window img {
+    width: 156px;
+    height: 156px;
+    top: -10px;
+    left: -10px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -551,16 +578,32 @@ body.night .toggle + .toggle-button:after {
   }
 }
 
-.night-scene {
-  display: none;
-}
 
-.night .day-scene {
-  display: none;
-}
 
-.night .night-scene {
+
+
+
+.zoom {
+  background-position: 50% 50%;
+  background-size: 312px 312px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.zoom img {
+  opacity: 1;
   display: block;
+}
+@media only screen and (min-width: 1280px) {
+  .zoom img:hover {
+    opacity: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .night .zoom img.flash,
+  .day .zoom img {
+    cursor: zoom-in;
+  }
 }
 
 /* Window light */
