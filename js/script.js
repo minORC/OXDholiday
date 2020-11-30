@@ -50,7 +50,7 @@ $(document).ready(function($) {
   /* Animation triggers */
   function initWaypoints() {
     var waypoint1 = new Waypoint({
-      element: $(".level1 .house"),
+      element: document.getElementById("house1"),
       handler: function(direction) {
         if ( $("body").hasClass("night") && direction === "down") {
           $(".window1 img").addClass("animated flash");
@@ -65,7 +65,7 @@ $(document).ready(function($) {
     })
 
     var waypoint2 = new Waypoint({
-      element: $(".level2 .house"),
+      element: document.getElementById("house2"),
       handler: function(direction) {
         if ( $("body").hasClass("night") && direction === "down") {
           $(".window2 img").addClass("animated flash");
@@ -79,7 +79,7 @@ $(document).ready(function($) {
     })
 
     var waypoint3 = new Waypoint({
-      element: $(".level3 .house"),
+      element: document.getElementById("house3"),
       handler: function(direction) {
         if ( $("body").hasClass("night") && direction === "down") {
           $(".window3 img").addClass("animated flash");
@@ -93,7 +93,7 @@ $(document).ready(function($) {
     })
 
     var waypoint4 = new Waypoint({
-      element: $(".level4 .house"),
+      element: document.getElementById("house4"),
       handler: function(direction) {
         if ( $("body").hasClass("night") && direction === "down") {
           $(".window4 img").addClass("animated flash");
