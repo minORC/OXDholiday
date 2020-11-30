@@ -1,4 +1,6 @@
 $(document).ready(function($) {
+  var mediaNotDesktop = window.matchMedia("(max-width: 1279px)");
+  var mediaMobile = window.matchMedia("(max-width: 767px)");
 
   /* Day/Night toggle */
   $("#daynightToggleSwitch").on("click", function() {
@@ -81,7 +83,7 @@ $(document).ready(function($) {
         }, 1000);
       }
     }, {
-  		offset: '50%'
+  		offset: '25%'
     });
 
     $(".level4 .house").waypoint(function(direction) {
@@ -113,29 +115,54 @@ $(document).ready(function($) {
   );
 
   /* Destroy rellax for mobile and tablet */
-  var mediaQuery = window.matchMedia("(max-width: 1279px)");
-
   function handleResponsive(e) {
     if (e.matches) {
       rellax.destroy();
-      Waypoint.destroyAll();
     }
     else {
-      initWaypoints();
       rellax.refresh();
     }
   }
 
+  function handleMobile(e) {
+    if (e.matches) {
+      var windowWidth = window.innerWidth;
+      var maxWidth = window.innerWidth - 60;
+      $(".greetings").css("width", maxWidth + "px");
+      $("#building").css("width", maxWidth + "px");
+      $("#building").css("height", (1760/653) * maxWidth + "px");
+      $(".level").css("width", (510/653) * maxWidth + "px");
+      $(".level").css("height", (1760/653) * maxWidth + "px");
+      $(".window").css("width", (137/653) * maxWidth + "px");
+      $(".window").css("height", (137/653) * maxWidth + "px");
+      $(".window img").css("width", (137/653) * maxWidth + "px");
+      $(".window img").css("height", (137/653) * maxWidth + "px");
+      $(".window1").css("left", (70/653) * maxWidth + "px");
+      $(".window1").css("top", (187/653) * maxWidth + "px");
+      $(".window2").css("left", (447/653) * maxWidth + "px");
+      $(".window2").css("top", (557/653) * maxWidth + "px");
+      $(".window3").css("left", (70/653) * maxWidth + "px");
+      $(".window3").css("top", (919/653) * maxWidth + "px");
+      $(".window4").css("left", (447/653) * maxWidth + "px");
+      $(".window4").css("top", (1283/653) * maxWidth + "px");
+
+    }
+  }
+
+  /* Set width and height (for IE) of snowhill svg depending on browser width */
   function setSnowhillSize(){
-    var windowWidth = window.innerWidth;
     $(".snowhill").css("width", windowWidth);
+    var windowWidth = window.innerWidth;
     $(".snowhill").css("height", (150/1440) * windowWidth + "px");
   }
 
-  mediaQuery.addEventListener("change", handleResponsive);
+  mediaNotDesktop.addEventListener("change", handleResponsive);
+  mediaMobile.addEventListener("change", handleMobile);
   $(window).on("resize", setSnowhillSize);
 
-  handleResponsive(mediaQuery);
+  initWaypoints();
+  handleResponsive(mediaNotDesktop);
+  handleMobile(mediaMobile);
   setSnowhillSize();
   setWindowScenes();
 });

@@ -100,7 +100,7 @@ body.night {
 #dayNightControls {
   display: flex;
   justify-content: flex-end;
-  padding: 40px 40px 100px;
+  padding: 30px 30px 120px;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -308,6 +308,7 @@ body.night .toggle + .toggle-button:after {
 .level1 {
   z-index: 1;
   margin: 0;
+  left: 0;
 }
 @media only screen and (min-width: 768px) {
   .level1 {
@@ -321,11 +322,13 @@ body.night .toggle + .toggle-button:after {
 }
 .level2 {
   z-index: 2;
-  margin-left: 53px;
+  margin-left: auto;
+  right: 0;
 }
 @media only screen and (min-width: 768px) {
   .level2 {
     margin-left: calc(366px * 0.625);
+    left: 0;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -336,6 +339,7 @@ body.night .toggle + .toggle-button:after {
 .level3 {
   z-index: 3;
   margin: 0;
+  left: 0;
 }
 @media only screen and (min-width: 768px) {
   .level3 {
@@ -345,10 +349,12 @@ body.night .toggle + .toggle-button:after {
 .level4 {
   z-index: 4;
   margin-left: 53px;
+  right: 0;
 }
 @media only screen and (min-width: 768px) {
   .level4 {
     margin-left: calc(510px * 0.625);
+    left: 0;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -369,9 +375,9 @@ body.night .toggle + .toggle-button:after {
 }
 
 /* beige */
-.level1 .house .front,
-.level3 .house .side,
-.level4 .house .side,
+.level1 .front,
+.level3 .side,
+.level4 .side,
 .sill,
 .light {
   /* fill: #f5f5dc; */
@@ -379,52 +385,52 @@ body.night .toggle + .toggle-button:after {
 }
 
 /* light-grey */
-.night .level1 .house .front,
-.night .level3 .house .side,
-.night .level4 .house .side,
+.night .level1 .front,
+.night .level3 .side,
+.night .level4 .side,
 .night .sill,
 .night .light {
   fill: #d6d7d8;
 }
 
 /* mobile light-pink */
-.level1 .house .side,
-.level2 .house .front,
-.level3 .house .front,
+.level1 .side,
+.level2 .front,
+.level3 .front,
 .level1 .sill,
 .level1 .light {
   fill: #ffc0cb;
 }
 
 /* mobile light-blue */
-.night .level1 .house .side,
-.night .level2 .house .front,
-.night .level3 .house .front,
+.night .level1 .side,
+.night .level2 .front,
+.night .level3 .front,
 .night .level1 .sill,
 .night .level1 .light {
   fill: #57acd1;
 }
 
 /* mobile pink */
-.level2 .house .side,
-.level4 .house .front {
+.level2 .side,
+.level4 .front {
   /* fill: #FF8FA6; */
   fill: #FC8DA7;
 }
 
 /* mobile blue */
-.night .level2 .house .side,
-.night .level4 .house .front {
+.night .level2 .side,
+.night .level4 .front {
   fill: #2577a9;
 }
 
 /* House color fills - tablet and desktop */
 @media only screen and (min-width: 768px) {
   /* beige */
-  .level1 .house .side,
-  .level2 .house .side,
-  .level3 .house .front,
-  .level4 .house .side,
+  .level1 .side,
+  .level2 .side,
+  .level3 .front,
+  .level4 .side,
   .level1 .light,
   .level1 .sill {
     /* fill: #f5f5dc; */
@@ -432,32 +438,32 @@ body.night .toggle + .toggle-button:after {
   }
 
   /* light-grey */
-  .night .level1 .house .side,
-  .night .level2 .house .side,
-  .night .level3 .house .front,
-  .night .level4 .house .side,
+  .night .level1 .side,
+  .night .level2 .side,
+  .night .level3 .front,
+  .night .level4 .side,
   .night .level1 .light,
   .night .level1 .sill {
     fill: #d6d7d8;
   }
 
   /* pink */
-  .level1 .house .front,
-  .level2 .house .front,
-  .level3 .house .side,
-  .level4 .house .front,
-  .level3 .house .light,
-  .level3 .house .sill {
+  .level1 .front,
+  .level2 .front,
+  .level3 .side,
+  .level4 .front,
+  .level3 .light,
+  .level3 .sill {
     fill: #ffc0cb;
   }
 
   /* blue */
-  .night .level1 .house .front,
-  .night .level2 .house .front,
-  .night .level3 .house .side,
-  .night .level4 .house .front,
-  .night .level3 .house .light,
-  .night .level3 .house .sill {
+  .night .level1 .front,
+  .night .level2 .front,
+  .night .level3 .side,
+  .night .level4 .front,
+  .night .level3 .light,
+  .night .level3 .sill {
     fill: #528fbc;
   }
 }
@@ -572,10 +578,13 @@ body.night .toggle + .toggle-button:after {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
   .night .window img {
     opacity: 0;
   }
+} */
+.night .window img {
+  opacity: 0;
 }
 
 
@@ -607,10 +616,13 @@ body.night .toggle + .toggle-button:after {
 }
 
 /* Window light */
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
   .light {
     opacity: 0;
   }
+} */
+.light {
+  opacity: 0;
 }
 
 /* Snow hill */
