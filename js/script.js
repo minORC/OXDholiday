@@ -61,7 +61,7 @@ $(document).ready(function($) {
           }, 1000);
         }
       },
-      offset: 10%
+      offset: "10%"
     })
 
     var waypoint2 = new Waypoint({
@@ -75,7 +75,7 @@ $(document).ready(function($) {
           }, 1000);
         }
       },
-      offset: 25%
+      offset: "25%"
     })
 
     var waypoint3 = new Waypoint({
@@ -89,7 +89,7 @@ $(document).ready(function($) {
           }, 1000);
         }
       },
-      offset: 25%
+      offset: "25%"
     })
 
     var waypoint4 = new Waypoint({
@@ -103,7 +103,7 @@ $(document).ready(function($) {
           }, 1000);
         }
       },
-      offset: 35%
+      offset: "35%"
     })
   }
 
