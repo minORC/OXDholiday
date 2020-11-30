@@ -49,54 +49,62 @@ $(document).ready(function($) {
 
   /* Animation triggers */
   function initWaypoints() {
-    $(".level1 .house").waypoint(function(direction) {
-      if ( $("body").hasClass("night") && direction === "down") {
-        $(".window1 img").addClass("animated flash");
-        $(".level1 .light").addClass("animated flash");
-        setTimeout(function(){
-          $(".window1").addClass("zoom");
-          $(".window1").css("background-image", "url('images/night1.jpg')");
-        }, 1000);
-      }
-    }, {
-  		offset: '10%'
-    });
+    var waypoint1 = new Waypoint({
+      element: $(".level1 .house"),
+      handler: function(direction) {
+        if ( $("body").hasClass("night") && direction === "down") {
+          $(".window1 img").addClass("animated flash");
+          $(".level1 .light").addClass("animated flash");
+          setTimeout(function(){
+            $(".window1").addClass("zoom");
+            $(".window1").css("background-image", "url('images/night1.jpg')");
+          }, 1000);
+        }
+      },
+      offset: 10%
+    })
 
-    $(".level2 .house").waypoint(function(direction) {
-      if ( $("body").hasClass("night") && direction === "down") {
-        $(".window2 img").addClass("animated flash");
-        $(".level2 .light").addClass("animated flash");
-        setTimeout(function(){
-          $(".window2").css("background-image", "url('images/night2.jpg')");
-        }, 1000);
-      }
-    }, {
-  		offset: '25%'
-    });
+    var waypoint2 = new Waypoint({
+      element: $(".level2 .house"),
+      handler: function(direction) {
+        if ( $("body").hasClass("night") && direction === "down") {
+          $(".window2 img").addClass("animated flash");
+          $(".level2 .light").addClass("animated flash");
+          setTimeout(function(){
+            $(".window2").css("background-image", "url('images/night2.jpg')");
+          }, 1000);
+        }
+      },
+      offset: 25%
+    })
 
-    $(".level3 .house").waypoint(function(direction) {
-      if ( $("body").hasClass("night") && direction === "down") {
-        $(".window3 img").addClass("animated flash");
-        $(".level3 .light").addClass("animated flash");
-        setTimeout(function(){
-          $(".window3").css("background-image", "url('images/night3.jpg')");
-        }, 1000);
-      }
-    }, {
-  		offset: '25%'
-    });
+    var waypoint3 = new Waypoint({
+      element: $(".level3 .house"),
+      handler: function(direction) {
+        if ( $("body").hasClass("night") && direction === "down") {
+          $(".window3 img").addClass("animated flash");
+          $(".level3 .light").addClass("animated flash");
+          setTimeout(function(){
+            $(".window3").css("background-image", "url('images/night3.jpg')");
+          }, 1000);
+        }
+      },
+      offset: 25%
+    })
 
-    $(".level4 .house").waypoint(function(direction) {
-      if ( $("body").hasClass("night") && direction === "down") {
-        $(".window4 img").addClass("animated flash");
-        $(".level4 .light").addClass("animated flash");
-        setTimeout(function(){
-          $(".window4").css("background-image", "url('images/night4.jpg')");
-        }, 1000);
-      }
-    }, {
-  		offset: '35%'
-    });
+    var waypoint4 = new Waypoint({
+      element: $(".level4 .house"),
+      handler: function(direction) {
+        if ( $("body").hasClass("night") && direction === "down") {
+          $(".window4 img").addClass("animated flash");
+          $(".level4 .light").addClass("animated flash");
+          setTimeout(function(){
+            $(".window4").css("background-image", "url('images/night4.jpg')");
+          }, 1000);
+        }
+      },
+      offset: 35%
+    })
   }
 
   /* Zoom on window scenes */
