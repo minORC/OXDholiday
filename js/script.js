@@ -1,7 +1,4 @@
 $(document).ready(function($) {
-  // var mediaNotDesktop = window.matchMedia("(max-width: 1279px)");
-  // var mediaMobile = window.matchMedia("(max-width: 767px)");
-
   /* Day/Night toggle */
   $("#daynightToggleSwitch").on("click", function() {
 
@@ -173,7 +170,4 @@ $(document).ready(function($) {
   handleMobile();
   setSnowhillSize();
   setWindowScenes();
-
-  // mediaNotDesktop.addEventListener("change", handleResponsive);
-  //mediaMobile.addEventListener("change", handleMobile);
 });
