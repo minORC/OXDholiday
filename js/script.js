@@ -140,8 +140,10 @@ $(document).ready(function($) {
       $(".level").css("height", (1760/653) * maxWidth + "px");
       $(".window").css("width", (137/653) * maxWidth + "px");
       $(".window").css("height", (137/653) * maxWidth + "px");
-      $(".window img").css("width", (137/653) * maxWidth + "px");
-      $(".window img").css("height", (137/653) * maxWidth + "px");
+      $(".window img").css("width", (197/653) * maxWidth + "px");
+      $(".window img").css("height", (197/653) * maxWidth + "px");
+      $(".window img").css("left", (-30/653) * maxWidth + "px");
+      $(".window img").css("top", (-30/653) * maxWidth + "px");
       $(".window1").css("left", (70/653) * maxWidth + "px");
       $(".window1").css("top", (187/653) * maxWidth + "px");
       $(".window2").css("left", (447/653) * maxWidth + "px");
