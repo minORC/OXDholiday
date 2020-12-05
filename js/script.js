@@ -169,6 +169,10 @@ $(document).ready(function($) {
     setSnowhillSize();
   });
 
+  $(window).on("orientationchange", function(){
+    location.reload();
+  });
+
   initWaypoints();
   handleResponsive();
   handleMobile();
