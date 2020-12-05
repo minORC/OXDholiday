@@ -6,10 +6,11 @@ $(document).ready(function($) {
       $("body").toggleClass("night day");
       $(".window img").removeClass("animated flash");
       $(".light").removeClass("animated flash");
+      $(".window").removeClass("flashed");
       setWindowDayBG();
     } else {
       $("body").toggleClass("night day");
-      $('.window').css("background-image","none");
+      $(".window").css("background-image","none");
     }
 
     setWindowScenes();
@@ -53,7 +54,7 @@ $(document).ready(function($) {
           $(".window1 img").addClass("animated flash");
           $(".level1 .light").addClass("animated flash");
           setTimeout(function(){
-            $(".window1").addClass("zoom");
+            $(".window1").addClass("flashed");
             $(".window1").css("background-image", "url('images/night1.jpg')");
           }, 1000);
         }
@@ -68,6 +69,7 @@ $(document).ready(function($) {
           $(".window2 img").addClass("animated flash");
           $(".level2 .light").addClass("animated flash");
           setTimeout(function(){
+            $(".window2").addClass("flashed");
             $(".window2").css("background-image", "url('images/night2.jpg')");
           }, 1000);
         }
@@ -82,6 +84,7 @@ $(document).ready(function($) {
           $(".window3 img").addClass("animated flash");
           $(".level3 .light").addClass("animated flash");
           setTimeout(function(){
+            $(".window3").addClass("flashed");
             $(".window3").css("background-image", "url('images/night3.jpg')");
           }, 1000);
         }
@@ -96,6 +99,7 @@ $(document).ready(function($) {
           $(".window4 img").addClass("animated flash");
           $(".level4 .light").addClass("animated flash");
           setTimeout(function(){
+            $(".window4").addClass("flashed");
             $(".window4").css("background-image", "url('images/night4.jpg')");
           }, 1000);
         }
@@ -108,14 +112,12 @@ $(document).ready(function($) {
 
   $(".zoom").mousemove(
     function(e){
-      console.log("mouse over");
       var zoomer = e.currentTarget;
       e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
       e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
       x = offsetX/zoomer.offsetWidth*100
       y = offsetY/zoomer.offsetHeight*100
       zoomer.style.backgroundPosition = x + '% ' + y + '%';
-        console.log("mouse over");
     }
   );
 

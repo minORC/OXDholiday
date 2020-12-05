@@ -472,7 +472,6 @@ body.night .toggle + .toggle-button:after {
   position: absolute;
   background: #314c7c;
   overflow: hidden;
-  z-index: -1;
   width: 51px;
   height: 51px;
 }
@@ -587,11 +586,6 @@ body.night .toggle + .toggle-button:after {
   opacity: 0;
 }
 
-
-
-
-
-
 .zoom {
   background-position: 50% 50%;
   background-size: 312px 312px;
@@ -603,14 +597,19 @@ body.night .toggle + .toggle-button:after {
   display: block;
 }
 @media only screen and (min-width: 1280px) {
-  .zoom img:hover {
-    opacity: 0 !important;
+  .night .zoom.flashed img,
+  .day .zoom img {
+    visibility: visible;
+  }
+  .night .zoom.flashed:hover img,
+  .day .zoom:hover img {
+    visibility: hidden;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .night .zoom img.flash,
-  .day .zoom img {
+  .night .zoom.flashed,
+  .day .zoom {
     cursor: zoom-in;
   }
 }
