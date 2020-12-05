@@ -611,6 +611,8 @@ body.night .toggle + .toggle-button:after {
   .night .zoom.flashed,
   .day .zoom {
     cursor: zoom-in;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
   }
 }
 
