@@ -376,107 +376,53 @@ body.night .toggle + .toggle-button:after {
   }
 }
 
-/* House color fills - mobile */
-/* salmon */
-.house .roof {
-  fill: #F0706E;
-}
-
 /* darkest blue */
-.night .house .roof {
+.house .roof {
   fill: #314c7c;
 }
 
-/* beige */
+/* light-grey */
 .level1 .front,
 .level3 .side,
 .level4 .side,
 .sill,
 .light {
-  /* fill: #f5f5dc; */
-  fill: #EBEBD3;
-}
-
-/* light-grey */
-.night .level1 .front,
-.night .level3 .side,
-.night .level4 .side,
-.night .sill,
-.night .light {
   fill: #d6d7d8;
 }
 
-/* mobile light-pink */
+/* mobile light-blue */
 .level1 .side,
 .level2 .front,
 .level3 .front,
 .level1 .sill,
 .level1 .light {
-  fill: #ffc0cb;
-}
-
-/* mobile light-blue */
-.night .level1 .side,
-.night .level2 .front,
-.night .level3 .front,
-.night .level1 .sill,
-.night .level1 .light {
   fill: #57acd1;
 }
 
-/* mobile pink */
+/* mobile blue */
 .level2 .side,
 .level4 .front {
-  /* fill: #FF8FA6; */
-  fill: #FC8DA7;
-}
-
-/* mobile blue */
-.night .level2 .side,
-.night .level4 .front {
   fill: #2577a9;
 }
 
 /* House color fills - tablet and desktop */
 @media only screen and (min-width: 768px) {
-  /* beige */
+  /* light-grey */
   .level1 .side,
   .level2 .side,
   .level3 .front,
   .level4 .side,
   .level1 .light,
   .level1 .sill {
-    /* fill: #f5f5dc; */
-    fill: #EBEBD3;
-  }
-
-  /* light-grey */
-  .night .level1 .side,
-  .night .level2 .side,
-  .night .level3 .front,
-  .night .level4 .side,
-  .night .level1 .light,
-  .night .level1 .sill {
     fill: #d6d7d8;
   }
-
-  /* pink */
+  /* blue */
   .level1 .front,
   .level2 .front,
   .level3 .side,
   .level4 .front,
   .level3 .light,
   .level3 .sill {
-    fill: #ffc0cb;
-  }
-
-  /* blue */
-  .night .level1 .front,
-  .night .level2 .front,
-  .night .level3 .side,
-  .night .level4 .front,
-  .night .level3 .light,
-  .night .level3 .sill {
     fill: #528fbc;
   }
 }
