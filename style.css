@@ -751,10 +751,17 @@ body.night .toggle + .toggle-button:after {
 #footer {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 20px 0;
   background: #000000;
   color: #ffffff;
+}
+@media only screen and (min-width: 768px) {
+  #footer {
+    flex-direction: row;
+    padding: 30px;
+  }
 }
 
 .footer__col {
