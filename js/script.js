@@ -155,7 +155,7 @@ $(document).ready(function($) {
       $(".window4").css("left", (447/653) * maxWidth + "px");
       $(".window4").css("top", (1283/653) * maxWidth + "px");
     }
-    if ( document.body.clientWidth > 769 ) {
+    if ( document.body.clientWidth >= 768 ) {
       $(".greetings").css("width", "600px");
       $("#building").css("width", (1020 * 0.625) + "px");
       $("#building").css("height", (1760 * 0.625) + "px");
@@ -209,10 +209,6 @@ $(document).ready(function($) {
   $(window).on("resize", function(){
     handleMobile();
     setSnowhillSize();
-  });
-
-  $(window).on("orientationchange", function(){
-    location.reload();
   });
 
   initWaypoints();
