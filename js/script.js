@@ -155,6 +155,48 @@ $(document).ready(function($) {
       $(".window4").css("left", (447/653) * maxWidth + "px");
       $(".window4").css("top", (1283/653) * maxWidth + "px");
     }
+    if ( document.body.clientWidth > 769 ) {
+      $(".greetings").css("width", "600px");
+      $("#building").css("width", (1020 * 0.625) + "px");
+      $("#building").css("height", (1760 * 0.625) + "px");
+      $(".level").css("width", (510 * 0.625) + "px");
+      $(".level").css("height", (1760 * 0.625) + "px");
+      $(".window").css("width", (137 * 0.625) + "px");
+      $(".window").css("height", (137 * 0.625) + "px");
+      $(".window img").css("width", (137 * 0.625) + "px");
+      $(".window img").css("height", (137 * 0.625) + "px");
+      $(".window img").css("left", "0");
+      $(".window img").css("top", "0");
+      $(".window1").css("left", (293 * 0.625) + "px");
+      $(".window1").css("top", (186 * 0.625) + "px");
+      $(".window2").css("left", (670 * 0.625) + "px");
+      $(".window2").css("top", (557 * 0.625) + "px");
+      $(".window3").css("left", (70 * 0.625) + "px");
+      $(".window3").css("top", (919 * 0.625) + "px");
+      $(".window4").css("left", (814 * 0.625) + "px");
+      $(".window4").css("top", (1283 * 0.625) + "px");
+    }
+    if ( document.body.clientWidth > 1279 ) {
+      $(".greetings").css("width", "1020px");
+      $("#building").css("width", "1020px");
+      $("#building").css("height", "1760px");
+      $(".level").css("width", "510px");
+      $(".level").css("height", "1760px");
+      $(".window").css("width", "137px");
+      $(".window").css("height", "137px");
+      $(".window img").css("width", "157px");
+      $(".window img").css("height", "157px");
+      $(".window img").css("left", "-10px");
+      $(".window img").css("top", "-10px");
+      $(".window1").css("left", "293px");
+      $(".window1").css("top", "186px");
+      $(".window2").css("left", "670px");
+      $(".window2").css("top", "557px");
+      $(".window3").css("left", "70px");
+      $(".window3").css("top", "919px");
+      $(".window4").css("left", "814px");
+      $(".window4").css("top", "1283px");
+    }
   }
 
   /* Set width and height (for IE) of snowhill svg depending on browser width */

@@ -583,8 +583,8 @@ body.night .toggle + .toggle-button:after {
 }
 @media only screen and (min-width: 1280px) {
   .window img {
-    width: 156px;
-    height: 156px;
+    width: 157px;
+    height: 157px;
     top: -10px;
     left: -10px;
   }
