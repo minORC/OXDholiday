@@ -123,7 +123,7 @@ $(document).ready(function($) {
 
   /* Destroy rellax for mobile and tablet */
   function handleResponsive() {
-    if ( window.innerWidth < 1280 ) {
+    if ( document.body.clientWidth < 1280 ) {
       rellax.destroy();
     }
     else {
@@ -132,9 +132,9 @@ $(document).ready(function($) {
   }
 
   function handleMobile() {
-    if ( window.innerWidth < 768 ) {
-      var windowWidth = window.innerWidth;
-      var maxWidth = window.innerWidth - 60;
+    if ( document.body.clientWidth < 768 ) {
+      var windowWidth = document.body.clientWidth;
+      var maxWidth = document.body.clientWidth - 60;
       $(".greetings").css("width", maxWidth + "px");
       $("#building").css("width", maxWidth + "px");
       $("#building").css("height", (1760/653) * maxWidth + "px");
@@ -159,7 +159,7 @@ $(document).ready(function($) {
 
   /* Set width and height (for IE) of snowhill svg depending on browser width */
   function setSnowhillSize(){
-    var windowWidth = window.innerWidth;
+    var windowWidth = document.body.clientWidth;
     $(".snowhill").css("width", windowWidth);
     $(".snowhill").css("height", (150/1440) * windowWidth + "px");
   }
